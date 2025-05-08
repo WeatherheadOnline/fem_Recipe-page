@@ -73,9 +73,21 @@ const PrepTimeBox = function() {
     <div className="prep-time-box">
       <h3 className="text-preset-3">Preparation time</h3>
       <ul className="text-preset-4">
-        <li><span className="text-preset-4-bold">Total:</span> {Omelette.times.total}</li>
-        <li><span className="text-preset-4-bold">Preparation:</span> {Omelette.times.prep}</li>
-        <li><span className="text-preset-4-bold">Cooking:</span> {Omelette.times.cook}</li>
+        <li>
+          <span className="li-container">
+            <span className="text-preset-4-bold">Total:</span> {Omelette.times.total}
+          </span>
+        </li>
+        <li>
+          <span className="li-container">
+            <span className="text-preset-4-bold">Preparation:</span> {Omelette.times.prep}
+          </span>
+        </li>
+        <li>
+          <span className="li-container">
+            <span className="text-preset-4-bold">Cooking:</span> {Omelette.times.cook}
+          </span>
+        </li>
       </ul>
     </div>
   )
@@ -85,7 +97,9 @@ class IngredientsBox extends React.Component {
   render() {
     const inputList = Omelette.ingredients.map((ingredient) => {
       return (
-        <li id={ingredient.slice(0,3)}>{ingredient}</li>
+        <li id={ingredient.slice(0,3)}>
+          <span className="li-container">{ingredient}</span>
+        </li>
       )
     });
     return (
