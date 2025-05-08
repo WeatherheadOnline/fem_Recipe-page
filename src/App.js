@@ -137,15 +137,27 @@ const NutritionBox = function() {
   )
 }
 
+const Line = function() {
+  return (
+    <div className="divider-line"></div>
+  )
+}
+
 function App() {
   return (
     <div className="App">
-    <RecipeImage />
-    <TitleIntro />
-    <PrepTimeBox />
-    <IngredientsBox />
-    <InstructionsBox />
-    <NutritionBox />
+    <div className="image-main-container">
+      <RecipeImage />
+    </div>
+    <div className="text-container">
+      <TitleIntro />
+      <PrepTimeBox />
+      <IngredientsBox />
+      <Line />
+      <InstructionsBox />
+      <Line />
+      <NutritionBox />
+    </div>
     
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
