@@ -1,0 +1,80 @@
+  *** Resources provided ***
+
+https://www.frontendmentor.io/articles/figma-for-developers-how-to-work-with-a-design-file-m6CZKZ1rC1
+
+https://www.frontendmentor.io/articles/git-and-github-essentials-a-beginners-guide-T4i1dKqfmH
+
+https://www.frontendmentor.io/articles/the-benefits-of-writing-a-good-challenge-readme-3EIwMaYVgz
+
+  *** Resources that helped me: ***
+
+To create a React app:
+https://www.c-sharpcorner.com/article/create-your-first-react-app-in-vs-code/
+
+To get npx working on the command line:
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5
+
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.5
+
+https://dev.to/jackfd120/resolving-npm-execution-policy-error-in-powershell-a-step-by-step-guide-for-developers-32ip
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The challenge is to recreate a recipe card in a responsive, well-spaced format.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+** Process: **
+
+Added colors to css as variables
+Added CSS rules for text preset classes
+Added @font-face rules to facilitate use of hosted fonts
+
+Decided that layout would be another straightforward collection of nested containers -> have some fun with the construction by using React.
+- construct ordered or unordered lists from arrays of ingredient or instruction items
+https://www.c-sharpcorner.com/article/create-your-first-react-app-in-vs-code/
+ Set-ExecutionPolicy -Scope CurrentUser
+
+
+*** add some SASS such that <li> inherits from .text-preset-whatever, and <li> > <span> inherits from .text-preset-whatever-else. ***
+
+const RecipeTitle = "Simple Omelette Recipe"
+const RecipeDescription = "..."
+
+component PreparationTimeBox (totalTime, prepTime, cookTime) {
+  <h3 class="text-preset-_">Preparation time</h3>
+  <ul>
+    <li><span>Total:</span> {this.props.totalTime}</li>
+    <li><span>Preparation:</span> {this.props.prepTime}</li>
+    <li><span>Cooking:</span> {this.props.cookTime}</li>
+  </ul>
+}
+
+component IngredientsBox ([ingredients array of strings]) {
+  <h2 class="text-preset-_">Ingredients</h2>
+  <ul>
+    (map a list of <li> elements from this.props.arr)
+  </ul>
+}
+
+component InstructionsBox ([array of objects comprising spans and main-text]) {
+  <h2 class="text-preset-_">Instructions</h2>
+  <ol>
+    map: <li><span>{span-text}:</span> {main-text}</li>
+  </ol>
+}
+
+component NutritionBox (calories, carbs, protein, fat)
+
+
+class Recipe = {
+  "title": "Simple Omelette Recipe",
+  "description": "",
+  "times": {
+    "total": "Approximately 10 minutes",
+    "prep": "5 minutes",
+    "cook": "5 minutes"
+  },
+
+
+}
