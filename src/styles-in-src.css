@@ -41,11 +41,13 @@ body {
     }
 }
 
-.text-container {padding: 0 var(--spacing-400-32) var(--spacing-400-32) var(--spacing-400-32);}
+
+
+
+.text-container {padding: var(--spacing-400-32)}
 .recipe-image-main {width: 100%;}
 @media screen and (hover) {
-    .text-container {padding: 0 var(--spacing-500-40) var(--spacing-500-40) var(--spacing-500-40);}
-    .image-main-container {padding: var(--spacing-500-40);}
+    .image-main-container {padding: var(--spacing-500-40) var(--spacing-500-40) 0 var(--spacing-500-40);}
     .recipe-image-main {border-radius: 2rem;}
 }
 
@@ -53,17 +55,24 @@ body {
     margin: 0;
 }
 
+.text-container > div {margin: var(--spacing-400-32) 0;}
+.text-container > div:first-child {margin: 0 0 var(--spacing-400-32) 0;}
+
+.text-container h2 {color: var(--brown-800);}
+.prep-time-box h3 {color: var(--rose-800);}
 .prep-time-box {
     background-color: var(--rose-50);
     border-radius: 1rem;
     padding: var(--spacing-300-24);
 }
-.prep-time-box h3 {
-    color: var(--rose-800);
+
+.intro p {
+    margin-top: var(--spacing-300-24);
 }
-.text-container h2 {
-    color: var(--brown-800);
-}
+
+
+
+
 
 
 @font-face {
