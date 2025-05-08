@@ -84,44 +84,71 @@ body {
     src: url(fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
 
-/* vw-unit values need to be fine tuned */
 .text-preset-1 {
     font-family: "Young Serif";
     font-weight: 400;
-    font-size: min(4rem, 7vw);
+    font-size: min(4rem, 9.6vw);
     line-height: 100%;
     color: var(--stone-900);
 }
 .text-preset-2 {
     font-family: "Young Serif";
     font-weight: 400;
-    font-size: min(2.8rem, 5vw);
+    font-size: 2.8rem;
     line-height: 100%;    
 }
 .text-preset-3 {
     font-family: "Outfit";
     font-weight: 600;
-    font-size: min(2rem, 4vw);
+    font-size: 2rem;
     line-height: 100%;       
 }
 .text-preset-4 {
     font-family: "Outfit";
     font-weight: 400;
-    font-size: min(1.6rem, 3vw);
+    font-size: 1.6rem;
     line-height: 150%;           
 }
 .text-preset-4-bold {
     font-family: "Outfit";
     font-weight: 700;
-    font-size: min(1.6rem, 3vw);
+    font-size: 1.6rem;
     line-height: 150%;               
 }
 
 .divider-line {
     width: 100%;
     height: 0;
-    border: 1px solid var(--stone-150);
+    border-top: 1px solid var(--stone-150);
 }
+
+.nutrition-box > p {
+    margin: var(--spacing-300-24) 0;
+}
+
+.nutrition-box .divider-line {
+    margin: var(--spacing-150-12) 0;
+}
+
+.nutrition-table span {
+    color: var(--brown-800);
+}
+
+.nutrition-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--spacing-400-32);
+}
+
+/* .nutrition-table {
+    display: grid;
+    grid-template-columns: ;
+} */
+
+
+/* table {
+    width: 100%;
+} */
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

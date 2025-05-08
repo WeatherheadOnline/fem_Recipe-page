@@ -117,7 +117,27 @@ const NutritionBox = function() {
   return (
     <div className="nutrition-box">
       <h2 className="text-preset-2">Nutrition</h2>
-      <table>
+      <p>The table below shows nutritional values per serving without the additional fillings.</p>
+      <div className="nutrition-table">
+        <div className="nutrition-table-row">
+          <p>Calories</p><span class="text-preset-4-bold">{Omelette.nutrition.calories}kcal</span>
+        </div>
+        <Line />
+        <div className="nutrition-table-row">
+          <p>Carbs</p><p><span class="text-preset-4-bold">{Omelette.nutrition.carbs}g</span></p>
+        </div>
+        <Line />
+        <div className="nutrition-table-row">
+          <p>Protein</p><p><span class="text-preset-4-bold">{Omelette.nutrition.protein}g</span></p>
+        </div>
+        <Line />
+        <div className="nutrition-table-row">
+          <p>Fat</p><p><span class="text-preset-4-bold">{Omelette.nutrition.fat}g</span></p>
+        </div>
+      </div>
+
+
+      {/* <table>
         <tbody>
           <tr>
             <td>Calories</td><td>{Omelette.nutrition.calories}kcal</td>
@@ -132,7 +152,8 @@ const NutritionBox = function() {
             <td>Fat</td><td>{Omelette.nutrition.fat}g</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
+
     </div>
   )
 }
