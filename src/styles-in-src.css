@@ -18,16 +18,13 @@
 }
 
 html {font-size: 10px;}
-
 html, body {margin: 0; padding: 0;}
-
 body {
     font-size: 1.6rem;
     letter-spacing: 0;
     background-color: var(--stone-100);
     color: var(--stone-600);
 }
-
 
 .App {
     width: 100vw;
@@ -56,10 +53,6 @@ body {
     .App {width: 73.6rem;}
 }
 
-
-
-
-
 .recipe-card {
     width: 100%;
     background-color: var(--white);
@@ -84,24 +77,19 @@ body {
     }
 }
 
-
-
-
-
-.text-container {padding: var(--spacing-400-32)}
 .recipe-image-main {width: 100%;}
 @media screen and (hover) {
     .image-main-container {padding: var(--spacing-500-40) var(--spacing-500-40) 0 var(--spacing-500-40);}
     .recipe-image-main {border-radius: 2rem;}
-}
-
+} 
+.text-container {padding: var(--spacing-400-32)}
 .text-container p, .text-container h1, .text-container h2, .text-container h3 {
     margin: 0;
 }
-
 .text-container > div {margin: var(--spacing-400-32) 0;}
 .text-container > div:first-child {margin: 0 0 var(--spacing-400-32) 0;}
 .text-container h2 {color: var(--brown-800);}
+
 .intro p {margin-top: var(--spacing-300-24);}
 
 .prep-time-box h3 {color: var(--rose-800);}
@@ -111,7 +99,14 @@ body {
     padding: var(--spacing-300-24);
 }        
 
-
+.nutrition-box > p {margin: var(--spacing-300-24) 0;}
+.nutrition-box .divider-line {margin: var(--spacing-150-12) 0;}
+.nutrition-table span {color: var(--brown-800);}
+.nutrition-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--spacing-400-32);
+}
 
 ul, ol, li {padding-left: var(--spacing-200-16);}
 li {margin-bottom: var(--spacing-100-8);}
@@ -122,9 +117,15 @@ li {margin-bottom: var(--spacing-100-8);}
     color: var(--brown-800);
     font-weight: bold;
 }
-ul li > span {
+ul li > span {   /* This causes bullets to be vertically centered with the text next to them */
     display: inline-block;
     vertical-align: middle;
+}
+
+.divider-line {
+    width: 100%;
+    height: 0;
+    border-top: 1px solid var(--stone-150);
 }
 
 @font-face {
@@ -135,7 +136,6 @@ ul li > span {
     font-family: "Outfit";
     src: url(fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
-
 .text-preset-1 {
     font-family: "Young Serif";
     font-weight: 400;
@@ -166,21 +166,6 @@ ul li > span {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 150%;               
-}
-
-.divider-line {
-    width: 100%;
-    height: 0;
-    border-top: 1px solid var(--stone-150);
-}
-
-.nutrition-box > p {margin: var(--spacing-300-24) 0;}
-.nutrition-box .divider-line {margin: var(--spacing-150-12) 0;}
-.nutrition-table span {color: var(--brown-800);}
-.nutrition-table-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 var(--spacing-400-32);
 }
 
 .attribution { font-size: 11px; text-align: center; margin: var(--spacing-300-24) 0;}

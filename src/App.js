@@ -1,10 +1,9 @@
 import React from 'react';
-// import './App.css';
 import recipeImage from "./images/image-omelette.jpeg";
 import "./styles-in-src.css";
 
 const Omelette = {
-  "image-src": "./images/image-omelette.jpg",
+  "image-src": recipeImage,
   "title": "Simple Omelette Recipe",
   "description": "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
   "times": {
@@ -53,44 +52,45 @@ const Omelette = {
   }
 }
 
-const RecipeImage = function() {
+const Line = function() {
   return (
-    <img src={recipeImage} className="recipe-image-main" alt="A dish made using this recipe" />
+    <div className="divider-line"></div>
   )
 }
 
 const TitleIntro = function() {
   return (
     <div className="intro">
-      <h1 className="text-preset-1">Simple Omelette Recipe</h1>
-      <p className="text-preset-4">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      <h1 className="text-preset-1">{Omelette.title}</h1>
+      <p className="text-preset-4">{Omelette.description}</p>
     </div>
   )
 }
 
-const PrepTimeBox = function() {
-  return (
-    <div className="prep-time-box">
-      <h3 className="text-preset-3">Preparation time</h3>
-      <ul className="text-preset-4">
+class PrepTimeBox extends React.Component {
+  render() {
+    const inputTimes = [
+      ["Total", Omelette.times.total],
+      ["Preparation", Omelette.times.prep],
+      ["Cooking", Omelette.times.cook]
+    ];
+    const compileTimes = inputTimes.map((time) => {
+      return (
         <li>
           <span className="li-container">
-            <span className="text-preset-4-bold">Total:</span> {Omelette.times.total}
+            <span className="text-preset-4-bold">{time[0]}: </span>{time[1]}
           </span>
         </li>
-        <li>
-          <span className="li-container">
-            <span className="text-preset-4-bold">Preparation:</span> {Omelette.times.prep}
-          </span>
-        </li>
-        <li>
-          <span className="li-container">
-            <span className="text-preset-4-bold">Cooking:</span> {Omelette.times.cook}
-          </span>
-        </li>
-      </ul>
-    </div>
-  )
+      )
+    });
+    return (
+      <div className="prep-time-box">
+        <h3 className="text-preset-3">Preparation time</h3>
+        <ul className="text-preset-4">{compileTimes}
+        </ul>
+      </div>
+    )
+  }
 }
 
 class IngredientsBox extends React.Component {
@@ -153,9 +153,28 @@ const NutritionBox = function() {
   )
 }
 
-const Line = function() {
+const RecipeImage = function() {
   return (
-    <div className="divider-line"></div>
+    <div className="image-main-container">
+      <img src={Omelette['image-src']} className="recipe-image-main" alt="A dish made using this recipe" />
+    </div>
+  )
+}
+
+const RecipeCard = function() {
+  return (
+    <div className="recipe-card">
+    <RecipeImage />
+    <div className="text-container">
+      <TitleIntro />
+      <PrepTimeBox />
+      <IngredientsBox />
+      <Line />
+      <InstructionsBox />
+      <Line />
+      <NutritionBox />
+    </div>
+  </div>
   )
 }
 
@@ -171,20 +190,7 @@ const Attribution = function() {
 function App() {
   return (
     <div className="App">
-      <div className="recipe-card">
-        <div className="image-main-container">
-          <RecipeImage />
-        </div>
-        <div className="text-container">
-          <TitleIntro />
-          <PrepTimeBox />
-          <IngredientsBox />
-          <Line />
-          <InstructionsBox />
-          <Line />
-          <NutritionBox />
-        </div>
-      </div>
+      <RecipeCard />
       <Attribution />
     </div>
   );
