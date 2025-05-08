@@ -28,18 +28,62 @@ body {
     color: var(--stone-600);
 }
 
+
 .App {
     width: 100vw;
+}
+
+/* Desktop and tablets */
+@media screen and (min-width: 540px) and (any-hover: none), screen and (hover) {    
+    .App {
+        max-width: 90vw;   
+        margin: auto;
+    }
+}
+
+/* Desktop or tablet, 540-619px wide */
+@media screen and (min-width: 540px) and (max-width: 619px) {
+    .App {width: 50rem;}
+}
+
+/* Desktop 620-750px wide, tablets over 620px wide */
+@media screen and (hover) and (min-width: 620px) {
+    .App {width: 61.6rem;}
+}
+
+/* Desktop only, over 750px wide */
+@media screen and (hover) and (min-width: 750px) {
+    .App {width: 73.6rem;}
+}
+
+
+
+
+
+.recipe-card {
+    width: 100%;
     background-color: var(--white);
 }
 
-@media screen and (hover) {
-    .App {
-        width: 60vw;
-        margin: auto;
-        border-radius: 2rem;
+/* Phones */
+@media screen and (max-width: 539px) {
+    body {
+        background-color: var(--white);
+    }
+    .recipe-card {
+        padding-bottom: 3rem;
     }
 }
+
+/* Desktop and tablets */
+@media screen and (min-width: 540px) and (any-hover: none), screen and (hover) {    
+    .recipe-card {
+        border-radius: 2rem;
+        margin-top: var(--spacing-1600-128);   
+        margin-bottom: var(--spacing-600-48);
+    }
+}
+
 
 
 
@@ -139,5 +183,5 @@ ul li > span {
     padding: 0 var(--spacing-400-32);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; margin: var(--spacing-300-24) 0;}
+.attribution a { color: var(--rose-800); }

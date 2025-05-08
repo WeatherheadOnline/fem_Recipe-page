@@ -131,8 +131,8 @@ const NutritionBox = function() {
   return (
     <div className="nutrition-box">
       <h2 className="text-preset-2">Nutrition</h2>
-      <p>The table below shows nutritional values per serving without the additional fillings.</p>
-      <div className="nutrition-table">
+      <p className="text-preset-4">The table below shows nutritional values per serving without the additional fillings.</p>
+      <div className="nutrition-table text-preset-4">
         <div className="nutrition-table-row">
           <p>Calories</p><span class="text-preset-4-bold">{Omelette.nutrition.calories}kcal</span>
         </div>
@@ -149,25 +149,6 @@ const NutritionBox = function() {
           <p>Fat</p><p><span class="text-preset-4-bold">{Omelette.nutrition.fat}g</span></p>
         </div>
       </div>
-
-
-      {/* <table>
-        <tbody>
-          <tr>
-            <td>Calories</td><td>{Omelette.nutrition.calories}kcal</td>
-          </tr>
-          <tr>
-            <td>Carbs</td><td>{Omelette.nutrition.carbs}g</td>
-          </tr>
-          <tr>
-            <td>Protein</td><td>{Omelette.nutrition.protein}g</td>
-          </tr>
-          <tr>
-            <td>Fat</td><td>{Omelette.nutrition.fat}g</td>
-          </tr>
-        </tbody>
-      </table> */}
-
     </div>
   )
 }
@@ -178,36 +159,33 @@ const Line = function() {
   )
 }
 
+const Attribution = function() {
+  return (
+    <div className="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.weatherheadonline.com">Eddie Weatherhead</a>.
+    </div>
+  )
+}
+
 function App() {
   return (
     <div className="App">
-    <div className="image-main-container">
-      <RecipeImage />
-    </div>
-    <div className="text-container">
-      <TitleIntro />
-      <PrepTimeBox />
-      <IngredientsBox />
-      <Line />
-      <InstructionsBox />
-      <Line />
-      <NutritionBox />
-    </div>
-    
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <div className="recipe-card">
+        <div className="image-main-container">
+          <RecipeImage />
+        </div>
+        <div className="text-container">
+          <TitleIntro />
+          <PrepTimeBox />
+          <IngredientsBox />
+          <Line />
+          <InstructionsBox />
+          <Line />
+          <NutritionBox />
+        </div>
+      </div>
+      <Attribution />
     </div>
   );
 }
