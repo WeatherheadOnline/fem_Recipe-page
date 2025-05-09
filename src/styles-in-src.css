@@ -80,7 +80,7 @@ body {
 .recipe-image-main {width: 100%;}
 @media screen and (hover) {
     .image-main-container {padding: var(--spacing-500-40) var(--spacing-500-40) 0 var(--spacing-500-40);}
-    .recipe-image-main {border-radius: 2rem;}
+    .recipe-image-main {border-radius: 1rem;}
 } 
 .text-container {padding: var(--spacing-400-32)}
 .text-container p, .text-container h1, .text-container h2, .text-container h3 {
