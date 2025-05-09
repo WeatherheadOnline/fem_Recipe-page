@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/fem_Recipe-page/static/css/main.598c9c41.css",
+    "main.css": "/fem_Recipe-page/static/css/main.cdc1f7de.css",
     "main.js": "/fem_Recipe-page/static/js/main.797af2c2.js",
     "static/js/453.18ff4896.chunk.js": "/fem_Recipe-page/static/js/453.18ff4896.chunk.js",
     "static/media/Outfit-VariableFont_wght.ttf": "/fem_Recipe-page/static/media/Outfit-VariableFont_wght.00c2ed1a3bf798b0da27.ttf",
     "static/media/YoungSerif-Regular.ttf": "/fem_Recipe-page/static/media/YoungSerif-Regular.564996966d3552bf6282.ttf",
     "static/media/image-omelette.jpeg": "/fem_Recipe-page/static/media/image-omelette.98c8ed59c5ae707e58ea.jpeg",
     "index.html": "/fem_Recipe-page/index.html",
-    "main.598c9c41.css.map": "/fem_Recipe-page/static/css/main.598c9c41.css.map",
+    "main.cdc1f7de.css.map": "/fem_Recipe-page/static/css/main.cdc1f7de.css.map",
     "main.797af2c2.js.map": "/fem_Recipe-page/static/js/main.797af2c2.js.map",
     "453.18ff4896.chunk.js.map": "/fem_Recipe-page/static/js/453.18ff4896.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.598c9c41.css",
+    "static/css/main.cdc1f7de.css",
     "static/js/main.797af2c2.js"
   ]
 }
