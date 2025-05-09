@@ -59,7 +59,7 @@ body {
 }
 
 /* Phones */
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 539px) and (any-hover: none) {
     body {
         background-color: var(--white);
     }
@@ -73,7 +73,7 @@ body {
     .recipe-card {
         border-radius: 2rem;
         margin-top: var(--spacing-1600-128);   
-        margin-bottom: var(--spacing-600-48);
+        margin-bottom: var(--spacing-1600-128);
     }
 }
 
