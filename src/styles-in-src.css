@@ -30,6 +30,9 @@ body {
     width: 100vw;
 }
 
+div {
+    box-sizing: border-box;
+}
 /* Desktop and tablets */
 @media screen and (min-width: 540px) and (any-hover: none), screen and (hover) {    
     .App {
@@ -71,7 +74,7 @@ body {
 /* Desktop and tablets */
 @media screen and (min-width: 540px) and (any-hover: none), screen and (hover) {    
     .recipe-card {
-        border-radius: 2rem;
+        border-radius: 2.4rem;
         margin-top: var(--spacing-1600-128);   
         margin-bottom: var(--spacing-1600-128);
     }
@@ -80,10 +83,10 @@ body {
 .recipe-image-main {width: 100%;}
 @media screen and (hover) {
     .image-main-container {padding: var(--spacing-500-40) var(--spacing-500-40) 0 var(--spacing-500-40);}
-    .recipe-image-main {border-radius: 1rem;}
+    .recipe-image-main {border-radius: 0.8rem;}
 } 
 .text-container {padding: var(--spacing-400-32)}
-.text-container p, .text-container h1, .text-container h2, .text-container h3 {
+p, h1, h2 {
     margin: 0;
 }
 .text-container > div {margin: var(--spacing-400-32) 0;}
@@ -92,7 +95,7 @@ body {
 
 .intro p {margin-top: var(--spacing-300-24);}
 
-.prep-time-box h3 {color: var(--rose-800);}
+.prep-time-box h2 {color: var(--rose-800);}
 .prep-time-box {
     background-color: var(--rose-50);
     border-radius: 1rem;
@@ -108,7 +111,8 @@ body {
     padding: 0 var(--spacing-400-32);
 }
 
-ul, ol, li {padding-left: var(--spacing-200-16);}
+ul, ol {padding-left: var(--spacing-300-24);}
+li {padding-left: var(--spacing-150-12);}
 li {margin-bottom: var(--spacing-100-8);}
 .prep-time-box li::marker, .ingredients-box li::marker {font-size: var(--spacing-150-12);}
 .prep-time-box li::marker {color: var(--rose-800);}

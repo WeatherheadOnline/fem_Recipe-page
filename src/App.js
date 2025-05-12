@@ -85,7 +85,7 @@ class PrepTimeBox extends React.Component {
     });
     return (
       <div className="prep-time-box">
-        <h3 className="text-preset-3">Preparation time</h3>
+        <h2 className="text-preset-3">Preparation time</h2>
         <ul className="text-preset-4">{compileTimes}
         </ul>
       </div>
